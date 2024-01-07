@@ -5,7 +5,7 @@
   body {
     font-family: Arial;
     padding: 20px;
-    background: #f1f1f1;
+    background: #ffffff;
   }
   
   /* Header/Blog Title */
@@ -39,7 +39,7 @@
   
   /* Add a card effect for articles */
   .card {
-    background-color: white;
+    background-color: rgb(237, 239, 255);
     padding: 20px;
     margin-top: 20px;
   }

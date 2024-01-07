@@ -18,7 +18,7 @@ if (isset($_POST['login_btn'])) {
     if ($result->num_rows == 1) {
         // Valid login, set session and redirect
         $_SESSION['user'] = $email;
-        header("Location: dashboard.php"); // Redirect to the dashboard after successful login
+        header("Location: register.php"); // Redirect to the dashboard after successful login
         exit();
     } else {
         $_SESSION['status'] = "Invalid credentials. Please try again.";

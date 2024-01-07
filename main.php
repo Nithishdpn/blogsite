@@ -15,7 +15,7 @@
         include('config.php');
 
         // Fetch blog posts from the database
-        $query = "SELECT * FROM posts"; // Replace 'posts_table' with your actual table name
+        $query = "SELECT * FROM posts"; 
         $result = mysqli_query($conn, $query);
 
         // Display fetched posts
@@ -28,7 +28,8 @@
                 </div>
 
                 <p><?php echo $row['PostDescription']; ?></p>
-                <a href="submain.php?post_id=<?php echo isset($row['postID']) ? $row['postID'] : ''; ?>" class="learn-more-btn" id="learnMoreBtn">Learn More</a>
+                <a href="submain.php<?php echo isset($row['id']) ? '?post_id=' . $row['id'] : ''; ?>" class="learn-more-btn" id="learnMoreBtn">Read More</a>
+
 
 
             </div>
@@ -53,6 +54,9 @@
 
 
         </div>
+
+        <a href="login.php" class="admin-login-btn">Admin Login</a>
+
     </div>
 </div>
 
@@ -61,6 +65,8 @@
     include('includes/scripts.php');
     include('includes/footer.php');
     ?>
+
+ 
 </div>
 
 
@@ -76,6 +82,22 @@
 }
 
 .learn-more-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Example styling for the admin login button */
+.admin-login-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.admin-login-btn:hover {
     background-color: #2980b9;
 }
 
