@@ -12,7 +12,7 @@ include('includes/navbar.php');
 <div class="container-fluid">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-1 font-weight-bold text-primary" style="font-size: 18px;">SSR Master Creation</h6>
+                <h6 class="m-1 font-weight-bold text-primary" style="font-size: 18px;">Display Posts</h6>
             </div>
             <div class="card-body">
 
@@ -30,6 +30,7 @@ include('includes/navbar.php');
                     <tr>
                         <th>Post ID</th>
                         <th>Post Title</th>
+                        <th>Post Description</th>
                         <th>Post Content</th>
                         <th>Image</th>
                          
@@ -47,6 +48,7 @@ include('includes/navbar.php');
                             <tr>
                                 <td><?php echo $row['id'] ?></td>
                                 <td><?php echo $row['postTitle'] ?></td>
+                                <td><?php echo $row['PostDescription'] ?></td>
                                 <td><?php echo $row['postContent'] ?></td>
                                 <td>
                                     <img src="<?php echo "uploads/".$row['postImage']; ?>" width="20px" alt="Image">

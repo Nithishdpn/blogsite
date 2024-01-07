@@ -29,6 +29,13 @@ include('config.php');
                                     <label for="postTitle">Post Title:</label>
                                     <input type="text" class="form-control" name="postTitle" value="<?php echo $row['postTitle']; ?>" id="postTitle" required>
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="postTitle">Post Description</label>
+                                    <input type="text" class="form-control" name="PostDescription" value="<?php echo $row['PostDescription']; ?>" id="PostDescription" required>
+                                </div>
+
+
                                 <div class="form-group">
                                     <label for="postContent">Post Content:</label>
                                     <textarea class="form-control" name="postContent" id="postContent" rows="5" required><?php echo $row['postContent']; ?></textarea>
